@@ -1,53 +1,76 @@
+# Gemälde-Daten – hier Titel, Jahr, Medium, Größe, Bild, Preis und Verkaufsstatus pflegen.
+# sold: true  → zeigt "Verkauft"-Badge, kein Preis
+# sold: false → zeigt den Preis an
+# image: Pfad im Repo (/assets/images/datei.svg) oder externe URL
+
 - title: Im Morgengrauen
   year: 2026
   medium: Öl auf Leinwand
   size: 120 × 90 cm
-  image: https://picsum.photos/seed/morgengrauen/800/600
+  image: /assets/images/im-morgengrauen.svg
+  price: "3.200 €"
+  sold: false
 
 - title: Tiefebene I
   year: 2025
   medium: Öl auf Leinwand
   size: 100 × 80 cm
   image: https://picsum.photos/seed/tiefebene1/800/600
+  price: "2.800 €"
+  sold: true
 
 - title: Stille Flut
   year: 2025
   medium: Acryl auf Leinwand
   size: 150 × 110 cm
   image: https://picsum.photos/seed/stilleflut/800/600
+  price: "4.500 €"
+  sold: false
 
 - title: Lichtrand
   year: 2024
   medium: Öl auf Holz
   size: 60 × 60 cm
   image: https://picsum.photos/seed/lichtrand/800/800
+  price: "1.400 €"
+  sold: true
 
 - title: Zwischen den Jahreszeiten
   year: 2024
   medium: Acryl auf Leinwand
   size: 200 × 150 cm
   image: https://picsum.photos/seed/jahreszeiten/800/600
+  price: "6.800 €"
+  sold: false
 
 - title: Blaue Stunde
   year: 2023
   medium: Öl auf Leinwand
   size: 90 × 70 cm
   image: https://picsum.photos/seed/blauestunde/800/600
+  price: "2.400 €"
+  sold: true
 
 - title: Offenes Land
   year: 2023
   medium: Acryl auf Leinwand
   size: 140 × 100 cm
   image: https://picsum.photos/seed/offenland/800/600
+  price: "3.800 €"
+  sold: false
 
 - title: Abend über dem See
   year: 2022
   medium: Öl auf Leinwand
   size: 80 × 60 cm
   image: https://picsum.photos/seed/abendsee/800/600
+  price: "2.200 €"
+  sold: false
 
 - title: Herbstlichter
   year: 2022
   medium: Öl auf Holz
   size: 50 × 50 cm
   image: https://picsum.photos/seed/herbstlicht/800/800
+  price: "980 €"
+  sold: true

@@ -6,8 +6,8 @@ layout: default
   <img src="https://picsum.photos/seed/marahero/1400/800" alt="Mara Steinbach – Malerin">
   <div class="hero-overlay">
     <div class="hero-text">
-      <h1>Mara Steinbach</h1>
-      <p>Malerin &nbsp;·&nbsp; Berlin</p>
+      <h1>{{ site.title }}</h1>
+      <p>{{ page.hero_subtitle }}</p>
     </div>
   </div>
 </section>
@@ -16,8 +16,8 @@ layout: default
   <div class="container">
     <div class="intro-inner">
       <div class="intro-text">
-        <h2>Abstrakte Landschaften</h2>
-        <p>Meine Arbeiten entstehen zwischen Beobachtung und Erinnerung – Landschaften, die nicht mehr genau dort liegen, wo ich sie gesehen habe, sondern sich in etwas Neues verwandelt haben. Öl und Acryl, manchmal beides auf einer Leinwand.</p>
+        <h2>{{ page.intro_headline }}</h2>
+        <p>{{ page.intro_text }}</p>
         <a href="{{ '/galerie/' | relative_url }}" class="btn">Zur Galerie</a>
       </div>
       <div class="intro-image">
@@ -29,12 +29,12 @@ layout: default
 
 <section class="featured">
   <div class="container">
-    <h2 class="section-title">Aktuelle Arbeiten</h2>
+    <h2 class="section-title">{{ page.featured_title }}</h2>
     <div class="featured-grid">
       {% for painting in site.data.paintings limit:3 %}
       <div class="featured-item">
         <a href="{{ '/galerie/' | relative_url }}">
-          <img src="{{ painting.image }}" alt="{{ painting.title }}">
+          <img src="{{ painting.image | relative_url }}" alt="{{ painting.title }}">
           <div class="featured-info">
             <h3>{{ painting.title }}</h3>
             <span>{{ painting.year }}, {{ painting.medium }}</span>
@@ -51,7 +51,7 @@ layout: default
 
 <section class="latest-posts">
   <div class="container">
-    <h2 class="section-title">Aus dem Atelier</h2>
+    <h2 class="section-title">{{ page.blog_title }}</h2>
     <div class="posts-list">
       {% for post in site.posts limit:3 %}
       <article class="post-preview">

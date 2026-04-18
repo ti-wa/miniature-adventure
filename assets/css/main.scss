@@ -499,6 +499,31 @@ a { color: inherit; text-decoration: none; }
 }
 .post-body img { width: 100%; margin: 2.5rem 0; }
 
+/* ── PREIS / VERKAUFT ── */
+.painting-status { margin-top: 0.5rem; }
+
+.badge-sold {
+  display: inline-block;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  background: var(--text);
+  color: var(--bg);
+}
+
+.painting-price {
+  font-size: 0.875rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.painting-card.is-sold .painting-img-wrap { position: relative; }
+
+.sold-overlay {
+  display: none; /* Badge unten reicht – Overlay optional aktivierbar */
+}
+
 /* ── FOOTER ── */
 .site-footer {
   background: var(--text);

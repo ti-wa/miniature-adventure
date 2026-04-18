@@ -4,19 +4,29 @@ layout: default
 
 <div class="container">
   <div class="page-header">
-    <h1>Galerie</h1>
-    <p>Öl und Acryl auf Leinwand, {{ site.time | date: "%Y" }} bis 2022</p>
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.gallery_subtitle }}</p>
   </div>
 
   <div class="gallery-grid">
     {% for painting in site.data.paintings %}
-    <article class="painting-card">
+    <article class="painting-card{% if painting.sold %} is-sold{% endif %}">
       <div class="painting-img-wrap">
-        <img src="{{ painting.image }}" alt="{{ painting.title }}, {{ painting.year }}">
+        <img src="{{ painting.image | relative_url }}" alt="{{ painting.title }}, {{ painting.year }}">
+        {% if painting.sold %}
+        <span class="sold-overlay">Verkauft</span>
+        {% endif %}
       </div>
       <div class="painting-info">
         <h3>{{ painting.title }}</h3>
         <p class="painting-meta">{{ painting.year }} &nbsp;·&nbsp; {{ painting.medium }} &nbsp;·&nbsp; {{ painting.size }}</p>
+        <div class="painting-status">
+          {% if painting.sold %}
+            <span class="badge-sold">Verkauft</span>
+          {% elsif painting.price %}
+            <span class="painting-price">{{ painting.price }}</span>
+          {% endif %}
+        </div>
       </div>
     </article>
     {% endfor %}
