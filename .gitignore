@@ -1,5 +1,9 @@
-_site
-.sass-cache
-.jekyll-cache
+# Basic Jekyll gitignores
+_site/
+.sass-cache/
+.jekyll-cache/
 .jekyll-metadata
-vendor
+
+# Ruby/bundler
+/vendor
+Gemfile.lock
