@@ -1,29 +1,17 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2026-04-18 21:37:17 +0200
-categories: jekyll update
+title: "Frühlingsarbeiten 2026"
+date: 2026-03-18 10:00:00 +0200
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-Jekyll requires blog post files to be named according to the following format:
+Der März bringt ein anderes Licht ins Atelier. Nach den langen grauen Wochen des Winters – in denen ich fast ausschließlich in Dunkelblau und Ocker gearbeitet habe – beginne ich jetzt wieder, mit Grüntönen zu experimentieren. Nicht das satte Grün des Hochsommers, sondern dieses zögernde, helle Grün, das in Berlin gegen Ende März die Bäume überzieht.
 
-`YEAR-MONTH-DAY-title.MARKUP`
+Die neue Serie heißt vorläufig „Tiefebenen". Ich denke dabei an die Landschaften, die man aus dem Zug heraus sieht – Brandenburg, Mecklenburg – diese flachen Weiten, die viele als langweilig empfinden und die ich so liebe. Es gibt dort keine dramatischen Gipfel, keine steilen Klippen. Nur Himmel, Horizont, Feld.
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+## Neue Formate
 
-Jekyll also offers powerful support for code snippets:
+Für diese Serie arbeite ich erstmals wieder auf großen Formaten – 150 × 120 cm und mehr. Nach einem Jahr, in dem ich mich vor allem kleinen, dichten Arbeiten gewidmet habe, brauche ich wieder diese Weite. Die Leinwand soll atmen.
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+Die ersten drei Bilder sind fertig grundiert, zwei davon haben schon die ersten Farbschichten bekommen. Ein früher Stand, aber ich spüre, dass es stimmt.
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+Wer sich für die Entwicklung interessiert: Ich plane, die Serie im Herbst 2026 in einem noch nicht festgelegten Berliner Raum zu zeigen. Mehr dazu in den nächsten Monaten.

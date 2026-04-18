@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div class="container">
+  <div class="page-header">
+    <h1>Galerie</h1>
+    <p>Öl und Acryl auf Leinwand, {{ site.time | date: "%Y" }} bis 2022</p>
+  </div>
+
+  <div class="gallery-grid">
+    {% for painting in site.data.paintings %}
+    <article class="painting-card">
+      <div class="painting-img-wrap">
+        <img src="{{ painting.image }}" alt="{{ painting.title }}, {{ painting.year }}">
+      </div>
+      <div class="painting-info">
+        <h3>{{ painting.title }}</h3>
+        <p class="painting-meta">{{ painting.year }} &nbsp;·&nbsp; {{ painting.medium }} &nbsp;·&nbsp; {{ painting.size }}</p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</div>

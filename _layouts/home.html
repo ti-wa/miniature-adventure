@@ -1,0 +1,66 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <img src="https://picsum.photos/seed/marahero/1400/800" alt="Mara Steinbach – Malerin">
+  <div class="hero-overlay">
+    <div class="hero-text">
+      <h1>Mara Steinbach</h1>
+      <p>Malerin &nbsp;·&nbsp; Berlin</p>
+    </div>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="container">
+    <div class="intro-inner">
+      <div class="intro-text">
+        <h2>Abstrakte Landschaften</h2>
+        <p>Meine Arbeiten entstehen zwischen Beobachtung und Erinnerung – Landschaften, die nicht mehr genau dort liegen, wo ich sie gesehen habe, sondern sich in etwas Neues verwandelt haben. Öl und Acryl, manchmal beides auf einer Leinwand.</p>
+        <a href="{{ '/galerie/' | relative_url }}" class="btn">Zur Galerie</a>
+      </div>
+      <div class="intro-image">
+        <img src="https://picsum.photos/seed/maraatelier/600/700" alt="Im Atelier">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="featured">
+  <div class="container">
+    <h2 class="section-title">Aktuelle Arbeiten</h2>
+    <div class="featured-grid">
+      {% for painting in site.data.paintings limit:3 %}
+      <div class="featured-item">
+        <a href="{{ '/galerie/' | relative_url }}">
+          <img src="{{ painting.image }}" alt="{{ painting.title }}">
+          <div class="featured-info">
+            <h3>{{ painting.title }}</h3>
+            <span>{{ painting.year }}, {{ painting.medium }}</span>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="section-cta">
+      <a href="{{ '/galerie/' | relative_url }}" class="btn btn-outline">Alle Werke</a>
+    </div>
+  </div>
+</section>
+
+<section class="latest-posts">
+  <div class="container">
+    <h2 class="section-title">Aus dem Atelier</h2>
+    <div class="posts-list">
+      {% for post in site.posts limit:3 %}
+      <article class="post-preview">
+        <time>{{ post.date | date: "%d. %B %Y" }}</time>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt | strip_html | truncate: 130 }}</p>
+      </article>
+      {% endfor %}
+    </div>
+    <a href="{{ '/blog/' | relative_url }}" class="btn btn-outline">Alle Beiträge</a>
+  </div>
+</section>
