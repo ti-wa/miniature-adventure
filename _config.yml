@@ -1,52 +1,41 @@
-# Welcome to Jekyll!
+# ═══════════════════════════════════════════════════════════════
+# Site-Konfiguration – Grundeinstellungen der Website
+# ═══════════════════════════════════════════════════════════════
 #
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# Änderungen hier wirken sich auf die GESAMTE Website aus:
+# Browser-Tab-Titel, Fußzeile, E-Mail-Adressen in Kontakt-Links,
+# SEO-Beschreibung in Google-Ergebnissen.
 
+# ── Name und Beschreibung ─────────────────────────────────────
 title: Mara Steinbach
-email: kontakt@marasteinbach.de
 description: Malerin in Berlin. Abstrakte Landschaften in Öl und Acryl.
+
+# ── Kontakt ───────────────────────────────────────────────────
+# Diese E-Mail wird für alle Kontakt-Links verwendet
+# (im Menü, in der Fußzeile, auf der Über-mich-Seite).
+email: kontakt@marasteinbach.de
+
+# ── Ort für die Fußzeile ──────────────────────────────────────
 location: Berlin
+
+# ═══════════════════════════════════════════════════════════════
+# Technische Einstellungen – normalerweise nicht anfassen
+# ═══════════════════════════════════════════════════════════════
+
+# URL und Pfad – nur ändern, wenn der Repo-Name sich ändert
 baseurl: "/miniature-adventure"
 url: "https://ti-wa.github.io"
 
-# Build settings
-theme: minima
+# Blog-Beiträge bekommen URLs wie /blog/titel/
 permalink: /blog/:title/
+
+# Automatischer RSS-Feed für Blog-Abonnenten
 plugins:
   - jekyll-feed
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# Dateien, die nicht mit auf die Website gehören
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

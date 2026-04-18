@@ -1,11 +1,16 @@
 ---
 layout: default
 ---
+<!--
+  Layout der Blog-Übersicht.
+  Titel und Untertitel kommen aus blog.md (title, description).
+  Beiträge liegen in _posts/ und werden automatisch eingelesen.
+-->
 
 <div class="container">
   <div class="page-header">
-    <h1>Blog</h1>
-    <p>Aus dem Atelier – Gedanken, Arbeitsberichte, Ausstellungen.</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p>{{ page.description }}</p>{% endif %}
   </div>
 
   <div class="blog-list">

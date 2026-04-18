@@ -1,6 +1,13 @@
 ---
 layout: default
 ---
+<!--
+  Layout der "Über mich"-Seite.
+  Biografie-Text = Fließtext unter dem "---" in ueber-mich.md.
+  Foto, Ausstellungen, Ausbildung = Front Matter in ueber-mich.md.
+  Überschriften können per Front Matter überschrieben werden
+  (exhibitions_title, education_title, contact_title).
+-->
 
 <div class="container">
   <div class="page-header">
@@ -13,13 +20,13 @@ layout: default
         <img src="{{ page.photo }}" alt="{{ page.title }}">
       </div>
       <div class="about-bio">
-        <h2>{{ page.intro_headline }}</h2>
+        {% if page.intro_headline %}<h2>{{ page.intro_headline }}</h2>{% endif %}
 
         {{ content }}
 
         <div class="cv">
           {% if page.exhibitions %}
-          <h3>Ausstellungen</h3>
+          <h3>{{ page.exhibitions_title | default: 'Ausstellungen' }}</h3>
           <ul>
             {% for ex in page.exhibitions %}
             <li>
@@ -31,7 +38,7 @@ layout: default
           {% endif %}
 
           {% if page.education %}
-          <h3>Ausbildung</h3>
+          <h3>{{ page.education_title | default: 'Ausbildung' }}</h3>
           <ul>
             {% for ed in page.education %}
             <li><strong>{{ ed.years }}</strong> – {{ ed.desc }}</li>
@@ -39,7 +46,7 @@ layout: default
           </ul>
           {% endif %}
 
-          <h3>Kontakt</h3>
+          <h3>{{ page.contact_title | default: 'Kontakt' }}</h3>
           <ul>
             <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
           </ul>

@@ -1,7 +1,35 @@
-# Gemälde-Daten – hier Titel, Jahr, Medium, Größe, Bild, Preis und Verkaufsstatus pflegen.
-# sold: true  → zeigt "Verkauft"-Badge, kein Preis
-# sold: false → zeigt den Preis an
-# image: Pfad im Repo (/assets/images/datei.svg) oder externe URL
+# ═══════════════════════════════════════════════════════════════
+# Gemälde – Liste aller Werke in der Galerie
+# ═══════════════════════════════════════════════════════════════
+#
+# Neue Gemälde immer ZUOBERST in die Liste einfügen.
+# Die Reihenfolge hier ist die Reihenfolge auf der Galerie-Seite.
+#
+# ── Felder je Gemälde ─────────────────────────────────────────
+#
+#   title:   Name des Bildes
+#   year:    Entstehungsjahr (Zahl, ohne Anführungszeichen)
+#   medium:  z.B. "Öl auf Leinwand", "Acryl auf Holz"
+#   size:    Format, z.B. "120 × 90 cm"
+#   image:   Pfad zum Bild
+#              ▸ im Repo:   /assets/images/mein-bild.jpg
+#              ▸ extern:    https://...
+#   price:   Preis IN ANFÜHRUNGSZEICHEN, z.B. "3.200 €"
+#   sold:    true  = "Verkauft"-Badge sichtbar, Preis wird ausgeblendet
+#            false = Preis wird angezeigt
+#
+# ── Beispiel für einen neuen Eintrag ──────────────────────────
+#
+#   - title: Neues Werk
+#     year: 2026
+#     medium: Öl auf Leinwand
+#     size: 100 × 80 cm
+#     image: /assets/images/neues-werk.jpg
+#     price: "2.500 €"
+#     sold: false
+#
+# WICHTIG: Einrückung mit 2 Leerzeichen (KEINE Tabs verwenden).
+# ═══════════════════════════════════════════════════════════════
 
 - title: Im Morgengrauen
   year: 2026

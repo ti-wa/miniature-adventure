@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Ausstellung „Lichtspuren" – ein Rückblick"
+title: 'Ausstellung „Lichtspuren" – ein Rückblick'
 date: 2026-01-15 09:00:00 +0200
 ---
 

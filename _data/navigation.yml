@@ -1,0 +1,28 @@
+# ═══════════════════════════════════════════════════════════════
+# Navigation – das Menü oben auf jeder Seite
+# ═══════════════════════════════════════════════════════════════
+#
+# Jeder Eintrag wird zu einem Menüpunkt.
+# Die Reihenfolge hier bestimmt die Reihenfolge im Menü.
+#
+# Felder:
+#   title:     Text, der im Menü erscheint
+#   url:       Der Link
+#                ▸ interne Seite: beginnt mit "/" (z.B. "/galerie/")
+#                ▸ E-Mail:        beginnt mit "mailto:"
+#                ▸ externer Link: beginnt mit "https://"
+#   highlight: true = der Eintrag wird als Button hervorgehoben (optional)
+# ═══════════════════════════════════════════════════════════════
+
+- title: Galerie
+  url: /galerie/
+
+- title: Blog
+  url: /blog/
+
+- title: Über mich
+  url: /ueber-mich/
+
+- title: Kontakt
+  url: mailto:kontakt@marasteinbach.de
+  highlight: true

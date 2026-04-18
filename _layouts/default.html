@@ -1,3 +1,11 @@
+<!--
+  Grund-Layout – umschließt JEDE Seite.
+  Enthält <head>, Kopfzeile (Menü), <main> (Seiteninhalt) und Fußzeile.
+
+  Normalerweise muss hier nichts geändert werden.
+  Menü-Einträge: _data/navigation.yml
+  Website-Titel / E-Mail: _config.yml
+-->
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -15,10 +23,19 @@
     <nav class="nav-container">
       <a href="{{ '/' | relative_url }}" class="site-name">{{ site.title }}</a>
       <ul class="nav-links">
-        <li><a href="{{ '/galerie/' | relative_url }}"{% if page.url contains 'galerie' %} class="active"{% endif %}>Galerie</a></li>
-        <li><a href="{{ '/blog/' | relative_url }}"{% if page.url contains 'blog' or page.layout == 'post' %} class="active"{% endif %}>Blog</a></li>
-        <li><a href="{{ '/ueber-mich/' | relative_url }}"{% if page.url contains 'ueber-mich' %} class="active"{% endif %}>Über mich</a></li>
-        <li><a href="mailto:{{ site.email }}" class="nav-contact">Kontakt</a></li>
+        {% for item in site.data.navigation %}
+          {%- assign is_external = false -%}
+          {%- if item.url contains 'mailto:' or item.url contains 'http' -%}
+            {%- assign is_external = true -%}
+          {%- endif -%}
+          <li>
+            {% if is_external %}
+              <a href="{{ item.url }}"{% if item.highlight %} class="nav-contact"{% endif %}>{{ item.title }}</a>
+            {% else %}
+              <a href="{{ item.url | relative_url }}"{% if page.url contains item.url %} class="active"{% endif %}>{{ item.title }}</a>
+            {% endif %}
+          </li>
+        {% endfor %}
       </ul>
     </nav>
   </header>

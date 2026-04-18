@@ -1,9 +1,16 @@
-# Basic Jekyll gitignores
+# Jekyll
 _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
 
-# Ruby/bundler
+# Ruby
 /vendor
 Gemfile.lock
+
+# macOS
+.DS_Store
+
+# Editoren
+.vscode/
+.idea/

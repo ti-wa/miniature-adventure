@@ -1,13 +1,18 @@
 ---
 layout: default
 ---
+<!--
+  Layout der Startseite.
+  Alle Texte kommen aus dem Front Matter von index.md.
+  Fallback-Werte (nach "default:") greifen, falls dort etwas fehlt.
+-->
 
 <section class="hero">
-  <img src="https://picsum.photos/seed/marahero/1400/800" alt="Mara Steinbach – Malerin">
+  <img src="{{ page.hero_image | default: 'https://picsum.photos/seed/marahero/1400/800' }}" alt="{{ site.title }}">
   <div class="hero-overlay">
     <div class="hero-text">
       <h1>{{ site.title }}</h1>
-      <p>{{ page.hero_subtitle }}</p>
+      <p>{{ page.hero_subtitle | default: site.description }}</p>
     </div>
   </div>
 </section>
@@ -16,12 +21,12 @@ layout: default
   <div class="container">
     <div class="intro-inner">
       <div class="intro-text">
-        <h2>{{ page.intro_headline }}</h2>
+        <h2>{{ page.intro_headline | default: 'Willkommen' }}</h2>
         <p>{{ page.intro_text }}</p>
-        <a href="{{ '/galerie/' | relative_url }}" class="btn">Zur Galerie</a>
+        <a href="{{ '/galerie/' | relative_url }}" class="btn">{{ page.cta_gallery | default: 'Zur Galerie' }}</a>
       </div>
       <div class="intro-image">
-        <img src="https://picsum.photos/seed/maraatelier/600/700" alt="Im Atelier">
+        <img src="{{ page.intro_image | default: 'https://picsum.photos/seed/maraatelier/600/700' }}" alt="Im Atelier">
       </div>
     </div>
   </div>
@@ -29,7 +34,7 @@ layout: default
 
 <section class="featured">
   <div class="container">
-    <h2 class="section-title">{{ page.featured_title }}</h2>
+    <h2 class="section-title">{{ page.featured_title | default: 'Ausgewählte Werke' }}</h2>
     <div class="featured-grid">
       {% for painting in site.data.paintings limit:3 %}
       <div class="featured-item">
@@ -44,14 +49,14 @@ layout: default
       {% endfor %}
     </div>
     <div class="section-cta">
-      <a href="{{ '/galerie/' | relative_url }}" class="btn btn-outline">Alle Werke</a>
+      <a href="{{ '/galerie/' | relative_url }}" class="btn btn-outline">{{ page.cta_all_works | default: 'Alle Werke' }}</a>
     </div>
   </div>
 </section>
 
 <section class="latest-posts">
   <div class="container">
-    <h2 class="section-title">{{ page.blog_title }}</h2>
+    <h2 class="section-title">{{ page.blog_title | default: 'Aus dem Atelier' }}</h2>
     <div class="posts-list">
       {% for post in site.posts limit:3 %}
       <article class="post-preview">
@@ -61,6 +66,6 @@ layout: default
       </article>
       {% endfor %}
     </div>
-    <a href="{{ '/blog/' | relative_url }}" class="btn btn-outline">Alle Beiträge</a>
+    <a href="{{ '/blog/' | relative_url }}" class="btn btn-outline">{{ page.cta_all_posts | default: 'Alle Beiträge' }}</a>
   </div>
 </section>
